@@ -1,0 +1,362 @@
+[
+	{
+		"n1:ParkingSystem": {
+			"n1:Cars": {
+				"n1:Car": [
+					{
+						"licensePlateNo": 123
+					},
+					{
+						"licensePlateNo": 456
+					},
+					{
+						"licensePlateNo": 789
+					},
+					{
+						"licensePlateNo": 110
+					}
+				]
+			},
+			"n1:Users": {
+				"n1:User": [
+					{
+						"reservationPermission": "false",
+						"id": 1001,
+						"password": 123,
+						"role": "admin",
+						"n1:Car": [
+							{
+								"licensePlateNo": 123
+							},
+							{
+								"licensePlateNo": 456
+							}
+						]
+					},
+					{
+						"reservationPermission": "false",
+						"id": 1002,
+						"password": 123,
+						"role": "student",
+						"n1:Car": {
+							"licensePlateNo": 789
+						}
+					},
+					{
+						"reservationPermission": "true",
+						"id": 1003,
+						"password": 123,
+						"role": "staff",
+						"n1:Car": {
+							"licensePlateNo": 110
+						}
+					}
+				]
+			},
+			"n1:ParkingLots": {
+				"n1:parkingLot": [
+					{
+						"id": 1,
+						"location": "Science Building",
+						"name": "Parking A",
+						"n1:Camera": {
+							"id": 10,
+							"parkingSlotsChecked": 6,
+							"specifications": "HD"
+						},
+						"n1:Gate": {
+							"status": "close",
+							"id": 100
+						},
+						"n1:ParkingSlots": {
+							"n1:ParkingSlot": [
+								{
+									"vacant": "true",
+									"slotNumber": 90
+
+								},
+								{
+									"vacant": "false",
+									"slotNumber": 80,
+									"n1:Car": {
+										"@licensePlateNo": 789
+									}
+								},
+								{
+									"vacant": "true",
+									"slotNumber": 70
+								},
+								{
+									"vacant": "true",
+									"slotNumber": 60
+								},
+								{
+									"vacant": "false",
+									"slotNumber": 50,
+									"n1:Car": {
+										"@licensePlateNo": 110
+									}
+								},
+								{
+									"vacant": "true",
+									"slotNumber": 40
+								}
+							]
+						},
+						"n1:Sensors": {
+							"n1:Sensor": [
+								{
+									"id": 90,
+									"status": "green"
+								},
+								{
+									"id": 80,
+									"status": "red"
+								},
+								{
+									"id": 70,
+									"status": "green"
+								},
+								{
+									"id": 60,
+									"status": "green"
+								},
+								{
+									"id": 50,
+									"status": "yellow"
+								},
+								{
+									"id": 40,
+									"status": "red"
+								}
+							]
+						}
+					},
+					{
+						"id": 2,
+						"location": "Engineering Building",
+						"name": "Parking B",
+						"n1:Camera": {
+							"id": 20,
+							"parkingSlotsChecked": 6,
+							"specifications": "XHD"
+						},
+						"n1:Gate": {
+							"status": "open",
+							"id": 200
+						},
+						"n1:ParkingSlots": {
+							"n1:ParkingSlot": [
+								{
+									"vacant": "true",
+									"slotNumber": 30
+								},
+								{
+									"vacant": "true",
+									"slotNumber": 20
+								},
+								{
+									"vacant": "true",
+									"slotNumber": 10
+								},
+								{
+									"vacant": "true",
+									"slotNumber": 110
+								},
+								{
+									"vacant": "false",
+									"slotNumber": 120
+								},
+								{
+									"vacant": "false",
+									"slotNumber": 130
+								}
+							]
+						},
+						"n1:Sensors": {
+							"n1:Sensor": [
+								{
+									"id": 30,
+									"status": "green"
+								},
+								{
+									"id": 20,
+									"status": "green"
+								},
+								{
+									"id": 10,
+									"status": "green"
+								},
+								{
+									"id": 110,
+									"status": "green"
+								},
+								{
+									"id": 120,
+									"status": "yellow"
+								},
+								{
+									"id": 130,
+									"status": "red"
+								}
+							]
+						}
+					},
+					{
+						"id": 3,
+						"location": "Research Building",
+						"name": "Parking C",
+						"n1:Camera": {
+							"id": 30,
+							"parkingSlotsChecked": 6,
+							"specifications": "HD"
+						},
+						"n1:Gate": {
+							"status": "close",
+							"id": 300
+						},
+						"n1:ParkingSlots": {
+							"n1:ParkingSlot": [
+								{
+									"vacant": "false",
+									"slotNumber": 140
+								},
+								{
+									"vacant": "true",
+									"slotNumber": 150
+								},
+								{
+									"vacant": "false",
+									"slotNumber": 160
+								},
+								{
+									"vacant": "true",
+									"slotNumber": 170
+								},
+								{
+									"vacant": "true",
+									"slotNumber": 180
+								},
+								{
+									"vacant": "true",
+									"slotNumber": 190
+								}
+							]
+						},
+						"n1:Sensors": {
+							"n1:Sensor": [
+								{
+									"id": 140,
+									"status": "red"
+								},
+								{
+									"id": 150,
+									"status": "green"
+								},
+								{
+									"id": 160,
+									"status": "red"
+								},
+								{
+									"id": 170,
+									"status": "green"
+								},
+								{
+									"id": 180,
+									"status": "green"
+								},
+								{
+									"id": 190,
+									"status": "green"
+								}
+							]
+						}
+					},
+					{
+						"id": 4,
+						"location": "Medicine College",
+						"name": "Parking D",
+						"n1:Camera": {
+							"id": 40,
+							"parkingSlotsChecked": 6,
+							"specifications": "HD"
+						},
+						"n1:Gate": {
+							"status": "open",
+							"id": 400
+						},
+						"n1:ParkingSlots": {
+							"n1:ParkingSlot": [
+								{
+									"vacant": "true",
+									"slotNumber": 200
+								},
+								{
+									"vacant": "true",
+									"slotNumber": 210
+								},
+								{
+									"vacant": "true",
+									"slotNumber": 220
+								},
+								{
+									"vacant": "true",
+									"slotNumber": 230
+								},
+								{
+									"vacant": "true",
+									"slotNumber": 240
+								},
+								{
+									"vacant": "true",
+									"slotNumber": 250
+								}
+							]
+						},
+						"n1:Sensors": {
+							"n1:Sensor": [
+								{
+									"id": 200,
+									"status": "green"
+								},
+								{
+									"id": 210,
+									"status": "green"
+								},
+								{
+									"id": 220,
+									"status": "green"
+								},
+								{
+									"id": 230,
+									"status": "green"
+								},
+								{
+									"id": 240,
+									"status": "green"
+								},
+								{
+									"id": 250,
+									"status": "green"
+								}
+							]
+						}
+					}
+				]
+			},
+			"n1:Reservations": {
+				"n1:Reservation": {
+					"id": 10102018,
+					"userId": 1001,
+					"reservationStartTime": "09:30:47",
+					"reservationEndTime": "10:30:47",
+					"reservationTime": "08:00:00",
+					"parkingSlotNo": 140,
+					"parkingLotNo": 1,
+					"licensePlateNo": 340,
+					"vistorName": "Muneera"
+				}
+			}
+		}
+	}
+]
